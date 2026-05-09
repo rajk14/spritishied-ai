@@ -88,7 +88,7 @@ SpitiShield is designed for the **"Dark Zones"** of the Himalayas. Our solution 
 
 You can download the latest tactical preview of **SpitiShield AI** directly to your Android device via EAS:
 
-👉 **[Download SpitiShield AI APK](https://expo.dev/accounts/rajsinha/projects/spitishield-mobile/builds/e66d1ef3-1d6c-4eac-9d0b-412167ddd85d)**
+👉 **[Download SpitiShield AI APK](https://expo.dev/accounts/rajsinha/projects/spitishield-mobile/builds/569c97ba-248a-4892-91f8-eab8ceec06de)**
 
 ---
 
