@@ -1,28 +1,43 @@
 {
   "expo": {
-    "name": "spitishield-mobile",
+    "name": "SpitiShield AI",
     "slug": "spitishield-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "spitishieldmobile",
-    "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
+    "scheme": "spitishield",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0A0A0A",
+    "primaryColor": "#FF5722",
+    "description": "SpitiShield AI — a mobile AI app with offline emergency automation for high-altitude journeys.",
     "splash": {
-      "image": "./assets/images/splash-icon.png",
+      "image": "./assets/images/icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#050505"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.spitishield.mobile"
     },
     "android": {
+      "package": "com.spitishield.mobile",
+      "config": {
+        "googleMaps": {
+          "apiKey": "YOUR_GOOGLE_MAPS_API_KEY_HERE"
+        }
+      },
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "FOREGROUND_SERVICE",
+        "CAMERA",
+        "RECORD_AUDIO",
+        "MODIFY_AUDIO_SETTINGS"
+      ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+        "backgroundColor": "#050505"
+      }
     },
     "web": {
       "bundler": "metro",
@@ -30,10 +45,21 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-sqlite",
+      "expo-secure-store",
+      "expo-location",
+      "expo-camera"
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "f22a7d19-4d43-4f47-8faf-b39267ce504f"
+      }
+    },
+    "owner": "rajsinha"
   }
 }
