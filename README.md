@@ -99,4 +99,4 @@ You can download the latest tactical preview of **SpitiShield AI** directly to y
 - **Scalability**: While built for Spiti, the logic is applicable to any remote wilderness area globally.
 
 ---
-*Built with ❤️ for the survival of the adventurous.*
+*Built with ❤️ by Rajkumar Sinha for the survival of the adventurous.*
