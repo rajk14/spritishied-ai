@@ -12,6 +12,13 @@ const { width, height } = Dimensions.get('window');
 
 const PAGES = [
   {
+    title: 'THE EDGE\nOF SURVIVAL',
+    desc: '14,000 FEET.\nNO INTERNET.\nMEDICAL EMERGENCY.\n\nAI STILL WORKS.',
+    icon: <Activity size={100} color="#f43f5e" />,
+    color: '#f43f5e',
+    accent: '#2e0000'
+  },
+  {
     title: 'SURVIVAL\nINTELLIGENCE',
     desc: 'Local-first AI trained for Himalayan emergencies. 100% offline medical and route guidance.',
     icon: <Cpu size={100} color="#FF5722" />,
@@ -188,19 +195,20 @@ const styles = StyleSheet.create({
   },
   title: {
     color: 'white',
-    fontSize: 54,
-    fontWeight: 'black',
+    fontSize: 48,
+    fontWeight: '900',
     textAlign: 'center',
-    lineHeight: 56,
-    letterSpacing: -2,
+    lineHeight: 52,
+    letterSpacing: -1,
   },
   desc: {
-    color: '#AAA',
-    fontSize: 16,
+    color: '#CCC',
+    fontSize: 15,
     textAlign: 'center',
-    lineHeight: 26,
-    paddingHorizontal: 10,
-    fontWeight: '500',
+    lineHeight: 24,
+    paddingHorizontal: 20,
+    fontWeight: '400', // Clean body text
+    letterSpacing: 0.5,
   },
   footer: {
     position: 'absolute',

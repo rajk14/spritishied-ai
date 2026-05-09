@@ -130,7 +130,7 @@ export default function AssistantScreen() {
               <Bot size={22} color="#FF5722" />
             </View>
             <View>
-              <Text className="text-white font-black text-lg">SURVIVAL <Text className="text-primary">AI</Text></Text>
+              <Text className="text-white font-black text-lg" style={{ fontWeight: '900', letterSpacing: 1 }}>SURVIVAL <Text className="text-primary">AI</Text></Text>
               <Text className={`text-[10px] uppercase font-bold tracking-tighter ${model === 'gemini' && isOnline ? 'text-blue-500' : 'text-green-500'}`}>
                 {model === 'gemini' && isOnline ? 'Satellite Link Active' : 'Local Inference Active'}
               </Text>
@@ -323,9 +323,11 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 4,
   },
   messageText: {
-    color: '#FFF',
+    color: '#CCC',
     fontSize: 14,
-    lineHeight: 20,
+    lineHeight: 22,
+    fontWeight: '400',
+    letterSpacing: 0.3,
   },
   inputWrapper: {
     flexDirection: 'row',

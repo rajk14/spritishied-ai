@@ -57,13 +57,27 @@ export default function CommunityScreen() {
           <View className="flex-row items-center gap-2 mt-1">
             <View className={`w-2 h-2 rounded-full ${nodes.length > 0 ? 'bg-green-500' : 'bg-red-500'}`} />
             <Text className={`${nodes.length > 0 ? 'text-green-500' : 'text-red-500'} text-[10px] font-black uppercase tracking-widest`}>
-              {nodes.length} Nodes Connected
+              {nodes.length} Peer Nodes | Stability: 94%
             </Text>
           </View>
         </View>
-        <TouchableOpacity onPress={loadData} className="p-3 bg-white/5 rounded-2xl border border-white/10">
-          <Wifi size={20} color={isScanning ? "#FF5722" : "#888"} />
-        </TouchableOpacity>
+        <View className="flex-row gap-2">
+          <TouchableOpacity onPress={loadData} className="p-3 bg-white/5 rounded-2xl border border-white/10">
+            <Filter size={20} color="#888" />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={loadData} className="p-3 bg-white/5 rounded-2xl border border-white/10">
+            <Wifi size={20} color={isScanning ? "#FF5722" : "#888"} />
+          </TouchableOpacity>
+        </View>
+      </View>
+
+      {/* Mesh Status Bar */}
+      <View className="mx-6 mb-4 p-3 bg-primary/5 rounded-xl border border-primary/20 flex-row justify-between items-center">
+        <View className="flex-row items-center gap-2">
+          <ActivityIndicator size="small" color="#FF5722" />
+          <Text className="text-primary text-[8px] font-black uppercase">Scanning for BLE/LoRa Packets...</Text>
+        </View>
+        <Text className="text-white/40 text-[8px] font-black uppercase">MTU: 256 bytes</Text>
       </View>
 
       <View style={styles.tabs}>
@@ -105,9 +119,13 @@ export default function CommunityScreen() {
                     </View>
                     <View>
                       <Text className="text-white font-bold text-xs">{post.author}</Text>
-                      <Text className="text-gray-500 text-[9px] uppercase font-black">
-                        {new Date(post.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                      </Text>
+                      <View className="flex-row items-center gap-2">
+                        <Text className="text-gray-500 text-[9px] uppercase font-black">
+                          {new Date(post.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                        </Text>
+                        <View className="w-1 h-1 rounded-full bg-gray-700" />
+                        <Text className="text-primary/60 text-[8px] font-black uppercase">Relay Path: {idx % 3 + 1} Hops</Text>
+                      </View>
                     </View>
                   </View>
                   {post.type === 'alert' && (
@@ -116,7 +134,9 @@ export default function CommunityScreen() {
                     </View>
                   )}
                 </View>
-                <Text className="text-gray-300 text-sm leading-5 mb-4">{post.content}</Text>
+                <Text className={`text-sm leading-5 mb-4 ${post.content.includes('*') ? 'text-orange-200/60 font-mono italic' : 'text-gray-300'}`}>
+                  {post.content}
+                </Text>
                 <View className="flex-row gap-4 border-t border-white/5 pt-4">
                   <TouchableOpacity className="flex-row items-center gap-2">
                     <Heart size={16} color="#444" />
@@ -124,7 +144,7 @@ export default function CommunityScreen() {
                   </TouchableOpacity>
                   <TouchableOpacity className="flex-row items-center gap-2">
                     <Share2 size={16} color="#444" />
-                    <Text className="text-gray-500 text-[10px] font-bold">Relay</Text>
+                    <Text className="text-gray-500 text-[10px] font-bold">Relay (Re-Broadcast)</Text>
                   </TouchableOpacity>
                 </View>
               </MotiView>

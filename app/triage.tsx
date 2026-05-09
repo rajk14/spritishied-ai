@@ -164,7 +164,8 @@ const styles = StyleSheet.create({
   headerTitle: {
     color: '#FFF',
     fontSize: 20,
-    fontWeight: 'black',
+    fontWeight: '900',
+    letterSpacing: 1,
   },
   scrollContent: {
     padding: 20,
@@ -188,14 +189,15 @@ const styles = StyleSheet.create({
   },
   riskValue: {
     fontSize: 32,
-    fontWeight: 'black',
+    fontWeight: '900',
   },
   adviceText: {
-    color: '#AAA',
+    color: '#CCC',
     fontSize: 13,
     textAlign: 'center',
-    lineHeight: 18,
+    lineHeight: 20,
     paddingHorizontal: 20,
+    fontWeight: '400',
   },
   scoreBadge: {
     backgroundColor: 'rgba(255,255,255,0.05)',
@@ -213,10 +215,10 @@ const styles = StyleSheet.create({
     gap: 16,
   },
   sectionTitle: {
-    color: '#666',
+    color: '#888',
     fontSize: 10,
-    fontWeight: 'black',
-    letterSpacing: 1,
+    fontWeight: '900',
+    letterSpacing: 2,
   },
   symptomRow: {
     backgroundColor: 'rgba(18, 18, 18, 0.5)',
@@ -317,6 +319,7 @@ const styles = StyleSheet.create({
     flex: 1,
     color: '#FF5722',
     fontSize: 11,
-    lineHeight: 16,
+    lineHeight: 18,
+    fontWeight: '400',
   }
 });

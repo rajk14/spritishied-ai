@@ -95,15 +95,21 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="journey"
+        name="map"
         options={{
-          tabBarIcon: ({ color }: any) => <Compass size={24} color={color} />,
+          tabBarIcon: ({ color }: any) => <MapIcon size={24} color={color} />,
         }}
       />
       <Tabs.Screen
         name="sos"
         options={{
           tabBarIcon: () => null,
+        }}
+      />
+      <Tabs.Screen
+        name="journey"
+        options={{
+          tabBarIcon: ({ color }: any) => <Compass size={24} color={color} />,
         }}
       />
       <Tabs.Screen
@@ -116,12 +122,6 @@ export default function TabLayout() {
         name="community"
         options={{
           tabBarIcon: ({ color }: any) => <Shield size={24} color={color} />,
-        }}
-      />
-      <Tabs.Screen
-        name="map"
-        options={{
-          tabBarIcon: ({ color }: any) => <MapIcon size={24} color={color} />,
         }}
       />
     </Tabs>
