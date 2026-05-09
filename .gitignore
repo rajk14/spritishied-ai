@@ -54,3 +54,7 @@ yarn-error.*
 # EAS
 .eas/
 credentials.json
+
+# Temporary / Generated
+graphify-out/
+.antigravity/
